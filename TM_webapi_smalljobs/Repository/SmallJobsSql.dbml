@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TM_SMALLJOBS" Class="SmallJobsSqlDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=LAPTOP-LE34C0NR\SQLEXPRESS;Initial Catalog=TM_SMALLJOBS;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="TM_SMALLJOBSConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.sp_AltaVacante" Method="sp_AltaVacante">
+    <Parameter Name="idUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NombreVacante" Parameter="nombreVacante" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="TipoPedido" Parameter="tipoPedido" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="NumContacto" Parameter="numContacto" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Direccion" Parameter="direccion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="FechaInicio" Parameter="fechaInicio" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="FechaFin" Parameter="fechaFin" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_ConsultaVacante" Method="sp_ConsultaVacante">
+    <Parameter Name="NombreVacante" Parameter="nombreVacante" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_ConsultaVacanteResult">
+      <Column Name="idVacante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NombreVacante" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TipoPedido" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NumContacto" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FechaInicio" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FechaFin" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
