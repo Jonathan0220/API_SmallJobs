@@ -118,6 +118,7 @@
     <Content Include="TM_SmallJobs_MainPage\Paginas\mainAdmin.aspx" />
     <Content Include="TM_SmallJobs_MainPage\Paginas\mainGeneral.aspx" />
     <Content Include="TM_SmallJobs_MainPage\Paginas\mainVoluntario.aspx" />
+    <Content Include="TM_SmallJobs_MainPage\Paginas\RegistroUsuarios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +165,13 @@
     </Compile>
     <Compile Include="TM_SmallJobs_MainPage\Paginas\mainVoluntario.aspx.designer.cs">
       <DependentUpon>mainVoluntario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TM_SmallJobs_MainPage\Paginas\RegistroUsuarios.aspx.cs">
+      <DependentUpon>RegistroUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TM_SmallJobs_MainPage\Paginas\RegistroUsuarios.aspx.designer.cs">
+      <DependentUpon>RegistroUsuarios.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

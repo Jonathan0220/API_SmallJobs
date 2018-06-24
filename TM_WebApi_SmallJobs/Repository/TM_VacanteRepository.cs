@@ -24,8 +24,7 @@ namespace TM_WebApi_SmallJobs.Repository
 
                 resultado = Convert.ToInt32(vacanteID);
             }
-
-
+            
             return resultado;
         }
 
