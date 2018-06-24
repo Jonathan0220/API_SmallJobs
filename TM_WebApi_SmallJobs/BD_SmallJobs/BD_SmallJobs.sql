@@ -52,12 +52,9 @@ CREATE TABLE Solicitud(idSolicitud int Primary key identity, idVacante int Forei
 --procedimiento de ingreso a la app
 
 ALTER PROCEDURE sp_loggin @Correo varchar(50), @Contraseña varchar(50) as 
-IF EXISTS ( SELECT * FROM Usuarios as u WHERE @Correo = u.Correo and @Contraseña = u.Contraseña) BEGIN 
-	RETURN 1
-	END
-ELSE 
-BEGIN 
-	RETURN 0
-END
+SELECT idUsuario, tipoUsuario FROM Usuarios as u WHERE @Correo = u.Correo and @Contraseña = u.Contraseña
+	
+
+exec sp_loggin 'jony16m', 'jon12a'
 
 

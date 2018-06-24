@@ -115,6 +115,9 @@
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="TM_SmallJobs_MainPage\Paginas\Loggin.aspx" />
+    <Content Include="TM_SmallJobs_MainPage\Paginas\mainAdmin.aspx" />
+    <Content Include="TM_SmallJobs_MainPage\Paginas\mainGeneral.aspx" />
+    <Content Include="TM_SmallJobs_MainPage\Paginas\mainVoluntario.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +143,27 @@
     </Compile>
     <Compile Include="TM_SmallJobs_MainPage\Paginas\Loggin.aspx.designer.cs">
       <DependentUpon>Loggin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TM_SmallJobs_MainPage\Paginas\mainAdmin.aspx.cs">
+      <DependentUpon>mainAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TM_SmallJobs_MainPage\Paginas\mainAdmin.aspx.designer.cs">
+      <DependentUpon>mainAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TM_SmallJobs_MainPage\Paginas\mainGeneral.aspx.cs">
+      <DependentUpon>mainGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TM_SmallJobs_MainPage\Paginas\mainGeneral.aspx.designer.cs">
+      <DependentUpon>mainGeneral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TM_SmallJobs_MainPage\Paginas\mainVoluntario.aspx.cs">
+      <DependentUpon>mainVoluntario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TM_SmallJobs_MainPage\Paginas\mainVoluntario.aspx.designer.cs">
+      <DependentUpon>mainVoluntario.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +191,7 @@
       <DependentUpon>SmallJobsSql.dbml</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
