@@ -75,6 +75,48 @@ namespace TM_WebApi_SmallJobs.Repository
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idUsuario, nombreVacante, descripcion, tipoPedido, numContacto, direccion, fechaInicio, fechaFin);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_ActualizaUsuario")]
+		public int sp_ActualizaUsuario([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Nombre", DbType="VarChar(50)")] string nombre, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Correo", DbType="VarChar(50)")] string correo, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Contraseña", DbType="VarChar(50)")] string contraseña, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ubicacion", DbType="VarChar(50)")] string ubicacion)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nombre, correo, contraseña, ubicacion);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_AltaUsuarios")]
+		public int sp_AltaUsuarios([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Nombre", DbType="VarChar(50)")] string nombre, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Correo", DbType="VarChar(50)")] string correo, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Contraseña", DbType="VarChar(50)")] string contraseña, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ubicacion", DbType="VarChar(50)")] string ubicacion, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TipoUsuario", DbType="VarChar(50)")] string tipoUsuario)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nombre, correo, contraseña, ubicacion, tipoUsuario);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_ActualizaVacante")]
+		public int sp_ActualizaVacante([global::System.Data.Linq.Mapping.ParameterAttribute(Name="NombreVacante", DbType="VarChar(50)")] string nombreVacante, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Descripcion", DbType="VarChar(50)")] string descripcion, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TipoPedido", DbType="VarChar(50)")] string tipoPedido, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NumContacto", DbType="VarChar(50)")] string numContacto, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Direccion", DbType="VarChar(50)")] string direccion, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FechaInicio", DbType="VarChar(50)")] string fechaInicio, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FechaFin", DbType="VarChar(50)")] string fechaFin, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Correo", DbType="VarChar(50)")] string correo)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nombreVacante, descripcion, tipoPedido, numContacto, direccion, fechaInicio, fechaFin, correo);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_BajaUsuarios")]
+		public int sp_BajaUsuarios([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> idUsuario)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idUsuario);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_BajaVacante")]
+		public int sp_BajaVacante([global::System.Data.Linq.Mapping.ParameterAttribute(Name="NombreVacante", DbType="VarChar(50)")] string nombreVacante)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nombreVacante);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_ConsultaUsuarios")]
+		public ISingleResult<sp_ConsultaUsuariosResult> sp_ConsultaUsuarios([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Correo", DbType="VarChar(50)")] string correo)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), correo);
+			return ((ISingleResult<sp_ConsultaUsuariosResult>)(result.ReturnValue));
+		}
 	}
 	
 	public partial class sp_ConsultaVacanteResult
@@ -242,6 +284,122 @@ namespace TM_WebApi_SmallJobs.Repository
 				if ((this._FechaFin != value))
 				{
 					this._FechaFin = value;
+				}
+			}
+		}
+	}
+	
+	public partial class sp_ConsultaUsuariosResult
+	{
+		
+		private int _idUsuario;
+		
+		private string _Nombre;
+		
+		private string _Correo;
+		
+		private string _Contraseña;
+		
+		private string _Ubicacion;
+		
+		private string _tipoUsuario;
+		
+		public sp_ConsultaUsuariosResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idUsuario", DbType="Int NOT NULL")]
+		public int idUsuario
+		{
+			get
+			{
+				return this._idUsuario;
+			}
+			set
+			{
+				if ((this._idUsuario != value))
+				{
+					this._idUsuario = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(50)")]
+		public string Nombre
+		{
+			get
+			{
+				return this._Nombre;
+			}
+			set
+			{
+				if ((this._Nombre != value))
+				{
+					this._Nombre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Correo", DbType="VarChar(50)")]
+		public string Correo
+		{
+			get
+			{
+				return this._Correo;
+			}
+			set
+			{
+				if ((this._Correo != value))
+				{
+					this._Correo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contraseña", DbType="VarChar(50)")]
+		public string Contraseña
+		{
+			get
+			{
+				return this._Contraseña;
+			}
+			set
+			{
+				if ((this._Contraseña != value))
+				{
+					this._Contraseña = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ubicacion", DbType="VarChar(50)")]
+		public string Ubicacion
+		{
+			get
+			{
+				return this._Ubicacion;
+			}
+			set
+			{
+				if ((this._Ubicacion != value))
+				{
+					this._Ubicacion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tipoUsuario", DbType="VarChar(50)")]
+		public string tipoUsuario
+		{
+			get
+			{
+				return this._tipoUsuario;
+			}
+			set
+			{
+				if ((this._tipoUsuario != value))
+				{
+					this._tipoUsuario = value;
 				}
 			}
 		}

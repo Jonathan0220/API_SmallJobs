@@ -11,8 +11,12 @@ namespace TM_WebApi_SmallJobs.Controllers
 {
     public class smalljobsController : ApiController
     {
-        //implememtacion de la interface 
+        //implememtacion de interface de vacante 
         private readonly ITMVacante ivacante = new TM_VacanteRepository();
+
+        //Implementacion de interface de usuarios
+        private readonly IUsuarios iusuarios = new TM_UsuariosRepository();
+
 
         /* Modulo de vacante */
         [HttpGet]
@@ -80,6 +84,68 @@ namespace TM_WebApi_SmallJobs.Controllers
             return msg;
         }
 
+        /* Modulo de usuarios */
+        [HttpGet]
+        public HttpResponseMessage obtenerUsuario(string correo) {
+            HttpResponseMessage msg = new HttpResponseMessage();
+            try
+            {
+                var usuario = iusuarios.obtenerUsuario(correo);
+                msg = Request.CreateResponse<Models.TMUsuarios>(HttpStatusCode.Created, usuario);
+            }
+            catch (Exception ex)
+            {
+                msg = Request.CreateResponse<string>(HttpStatusCode.InternalServerError, ex.ToString());
+            }
+            return msg;
+        }
 
+        [HttpPost]
+        public HttpResponseMessage registrarUsuario(Models.TMUsuarios musuario)
+        {
+            HttpResponseMessage msg = new HttpResponseMessage();
+            try
+            {
+                var usuario = iusuarios.registrarusuario(musuario);
+                msg = Request.CreateResponse<int>(HttpStatusCode.Created, usuario);
+            }
+            catch (Exception ex)
+            {
+                msg = Request.CreateResponse<string>(HttpStatusCode.InternalServerError, ex.ToString());
+            }
+            return msg;
+        }
+
+        [HttpPut]
+        public HttpResponseMessage actualizarUsuario(string correo, Models.TMUsuarios musuario)
+        {
+            HttpResponseMessage msg = new HttpResponseMessage();
+            try
+            {
+                var usuario = iusuarios.actualizarusuario(correo, musuario);
+                msg = Request.CreateResponse<bool>(HttpStatusCode.Created, usuario);
+            }
+            catch (Exception ex)
+            {
+                msg = Request.CreateResponse<string>(HttpStatusCode.InternalServerError, ex.ToString());
+            }
+            return msg;
+        }
+
+        [HttpDelete]
+        public HttpResponseMessage eliminarUsuario(int idUsuario)
+        {
+            HttpResponseMessage msg = new HttpResponseMessage();
+            try
+            {
+                var usuario = iusuarios.eliminausuario(idUsuario);
+                msg = Request.CreateResponse<bool>(HttpStatusCode.Created, usuario);
+            }
+            catch (Exception ex)
+            {
+                msg = Request.CreateResponse<string>(HttpStatusCode.InternalServerError, ex.ToString());
+            }
+            return msg;
+        }
     }
 }

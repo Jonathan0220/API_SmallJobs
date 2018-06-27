@@ -128,6 +128,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\ITMVacante.cs" />
+    <Compile Include="Interfaces\IUsuarios.cs" />
+    <Compile Include="Models\TMUsuarios.cs" />
     <Compile Include="Models\TMVacante.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\ConnectionString.cs" />
@@ -137,6 +139,7 @@
       <DependentUpon>SmallJobsSql.dbml</DependentUpon>
     </Compile>
     <Compile Include="Repository\SmallJobsSqlDataContext.cs" />
+    <Compile Include="Repository\TM_UsuariosRepository.cs" />
     <Compile Include="Repository\TM_VacanteRepository.cs" />
     <Compile Include="TM_SmallJobs_MainPage\Paginas\Loggin.aspx.cs">
       <DependentUpon>Loggin.aspx</DependentUpon>

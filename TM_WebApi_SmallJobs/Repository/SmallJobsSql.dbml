@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TM_SMALLJOBS" Class="SmallJobsSqlDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=LAPTOP-LE34C0NR\SQLEXPRESS;Initial Catalog=TM_SMALLJOBS;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="TM_SMALLJOBSConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=LAPTOP-LE34C0NR\SQLEXPRESS;Initial Catalog=TM_SMALLJOBS;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="TM_SMALLJOBSConnectionString" Provider="System.Data.SqlClient" />
   <Function Name="dbo.sp_ConsultaVacante" Method="sp_ConsultaVacante">
     <Parameter Name="NombreVacante" Parameter="nombreVacante" Type="System.String" DbType="VarChar(50)" />
     <ElementType Name="sp_ConsultaVacanteResult">
@@ -24,5 +24,50 @@
     <Parameter Name="FechaInicio" Parameter="fechaInicio" Type="System.String" DbType="VarChar(50)" />
     <Parameter Name="FechaFin" Parameter="fechaFin" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_ActualizaUsuario" Method="sp_ActualizaUsuario">
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Correo" Parameter="correo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Contraseña" Parameter="contraseña" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Ubicacion" Parameter="ubicacion" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_AltaUsuarios" Method="sp_AltaUsuarios">
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Correo" Parameter="correo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Contraseña" Parameter="contraseña" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Ubicacion" Parameter="ubicacion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="TipoUsuario" Parameter="tipoUsuario" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_ActualizaVacante" Method="sp_ActualizaVacante">
+    <Parameter Name="NombreVacante" Parameter="nombreVacante" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="TipoPedido" Parameter="tipoPedido" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="NumContacto" Parameter="numContacto" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Direccion" Parameter="direccion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="FechaInicio" Parameter="fechaInicio" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="FechaFin" Parameter="fechaFin" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Correo" Parameter="correo" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_BajaUsuarios" Method="sp_BajaUsuarios">
+    <Parameter Name="idUsuario" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_BajaVacante" Method="sp_BajaVacante">
+    <Parameter Name="NombreVacante" Parameter="nombreVacante" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_ConsultaUsuarios" Method="sp_ConsultaUsuarios">
+    <Parameter Name="Correo" Parameter="correo" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_ConsultaUsuariosResult">
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Ubicacion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tipoUsuario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
   </Function>
 </Database>

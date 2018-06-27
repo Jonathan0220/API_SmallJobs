@@ -13,8 +13,7 @@ namespace TM_WebApi_SmallJobs.Repository
     {
         public int registrarVacante(Models.TMVacante mdVacante)
         {
-            Models.TMVacante mVacante = new Models.TMVacante();
-
+            
             int resultado = 0;
             int? vacanteID = null;
 
