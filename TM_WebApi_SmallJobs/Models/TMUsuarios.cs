@@ -9,7 +9,7 @@ namespace TM_WebApi_SmallJobs.Models
     {
         public string nombre { get; set; }
         public string correo { get; set; }
-        public string constraseña { get; set; }
+        public string contraseña { get; set; }
         public string ubicacion { get; set; }
         public string tipoUsuario { get; set; }
     }

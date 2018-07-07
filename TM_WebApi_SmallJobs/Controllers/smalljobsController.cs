@@ -101,7 +101,7 @@ namespace TM_WebApi_SmallJobs.Controllers
         }
 
         [HttpPost]
-        public HttpResponseMessage registrarUsuario(Models.TMUsuarios musuario)
+        public HttpResponseMessage registrarUsuario(Models.TMUsuarios musuario, string clave)
         {
             HttpResponseMessage msg = new HttpResponseMessage();
             try
@@ -117,7 +117,7 @@ namespace TM_WebApi_SmallJobs.Controllers
         }
 
         [HttpPut]
-        public HttpResponseMessage actualizarUsuario(string correo, Models.TMUsuarios musuario)
+        public HttpResponseMessage actualizarUsuario(string correo, string clave, Models.TMUsuarios musuario)
         {
             HttpResponseMessage msg = new HttpResponseMessage();
             try
