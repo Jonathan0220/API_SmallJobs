@@ -22,6 +22,15 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// lblBoton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblBoton;
+        
+        /// <summary>
         /// idUsuario control.
         /// </summary>
         /// <remarks>
@@ -31,75 +40,12 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas {
         protected global::System.Web.UI.WebControls.Label idUsuario;
         
         /// <summary>
-        /// lblnombreVacante control.
+        /// RepeaterVacante control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblnombreVacante;
-        
-        /// <summary>
-        /// lblubicacion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblubicacion;
-        
-        /// <summary>
-        /// lbltipoVacante control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbltipoVacante;
-        
-        /// <summary>
-        /// lbldescripcion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbldescripcion;
-        
-        /// <summary>
-        /// lblnumeroContacto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblnumeroContacto;
-        
-        /// <summary>
-        /// lblfechaInicio control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblfechaInicio;
-        
-        /// <summary>
-        /// lblfechaFin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblfechaFin;
-        
-        /// <summary>
-        /// btnPostular control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPostular;
+        protected global::System.Web.UI.WebControls.Repeater RepeaterVacante;
     }
 }

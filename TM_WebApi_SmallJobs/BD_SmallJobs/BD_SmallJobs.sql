@@ -6,7 +6,7 @@ CREATE TABLE Usuarios (idUsuario int Primary Key Identity, Nombre varchar(50), C
 Contraseña varchar(50), Ubicacion varchar(50), tipoUsuario varchar(50));
 
         --Procedure Altas 
-        ALTER PROCEDURE sp_AltaUsuarios (@Nombre varchar(50), @Correo varchar(50), @Contraseña varchar(50), @Ubicacion varchar (50), 
+        CREATE PROCEDURE sp_AltaUsuarios (@Nombre varchar(50), @Correo varchar(50), @Contraseña varchar(50), @Ubicacion varchar (50), 
         @TipoUsuario varchar(50)) AS
 		IF EXISTS (SELECT * FROM Usuarios where Correo = @Correo) BEGIN
 			return 0
@@ -14,7 +14,7 @@ Contraseña varchar(50), Ubicacion varchar(50), tipoUsuario varchar(50));
 		ELSE
 		BEGIN
 		INSERT INTO Usuarios VALUES (@Nombre, @Correo, @Contraseña, @Ubicacion, @TipoUsuario)
-		END
+		END;
 
 	
         --Procedure Bajas
@@ -49,12 +49,9 @@ TipoPedido varchar(50), NumContacto varchar(50), Direccion varchar(50), FechaIni
 --Tabla de solicitudes
 CREATE TABLE Solicitud(idSolicitud int Primary key identity, idVacante int Foreign key references Vacante(idVacante), idUsuario int Foreign key references Usuarios(idUsuario));
 
+CREATE TABLE Notificacion (idNotificacion int Primary key, idUsuario int Foreign key references Usuarios(idusuario), idVacante int foreign key references Vacante(idVacante), Descripcion varchar(50));
+CREATE TABLE TipoPedido (idTipoPedido int primary key, Nombre varchar(50));
 --procedimiento de ingreso a la app
 
-ALTER PROCEDURE sp_loggin @Correo varchar(50), @Contraseña varchar(50) as 
-SELECT idUsuario, tipoUsuario FROM Usuarios as u WHERE @Correo = u.Correo and @Contraseña = u.Contraseña
-	
-
-exec sp_loggin 'jony16m', 'jon12a'
-
-
+CREATE PROCEDURE sp_loggin @Correo varchar(50), @Contraseña varchar(50) as 
+SELECT idUsuario, tipoUsuario FROM Usuarios as u WHERE @Correo = u.Correo and @Contraseña = u.Contraseña;
