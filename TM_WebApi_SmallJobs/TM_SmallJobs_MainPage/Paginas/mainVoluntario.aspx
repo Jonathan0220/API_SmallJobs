@@ -53,7 +53,7 @@
                             </tr>
                             <tr>
                                 <td class="tr_botonvacante" colspan="2">
-                                    <asp:Button ID="btnPostular" Text="Postular" CommandName ="postular" runat="server" />
+                                    <asp:Button ID="btnPostular" Text="Postular" CommandName ="postular" CommandArgument='<%# Eval("idVacante") %>' runat="server" />
                                 </td>
                             </tr>
                         </table>
