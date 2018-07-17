@@ -114,6 +114,11 @@
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="TM_SmallJobs_MainPage\Paginas\css\bootstrap.min.css" />
+    <Content Include="TM_SmallJobs_MainPage\Paginas\css\estilo.css" />
+    <Content Include="TM_SmallJobs_MainPage\Paginas\css\signin.css" />
+    <Content Include="TM_SmallJobs_MainPage\Paginas\jquery\bootstrap.min.js" />
+    <Content Include="TM_SmallJobs_MainPage\Paginas\jquery\jquery-1.11.1.min.js" />
     <Content Include="TM_SmallJobs_MainPage\Paginas\Loggin.aspx" />
     <Content Include="TM_SmallJobs_MainPage\Paginas\mainAdmin.aspx" />
     <Content Include="TM_SmallJobs_MainPage\Paginas\mainGeneral.aspx" />

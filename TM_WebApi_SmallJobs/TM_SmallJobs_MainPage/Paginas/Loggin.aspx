@@ -4,42 +4,27 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet"/>
 </head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
+<body class="text-center">
+    <form id="form1" runat="server" class="form-signin">
+        <img class="mb-4" src="C:\Users\migue\Desktop\440727-best-no-game-no-life-wallpapers-1920x1200-laptop.jpg" alt="" width="72" height="72"/>
+        <h1 class="h3 mb-3 font-weight-normal">Iniciar sesion</h1>
         
-        
-        
-        
-    
-    </div>
-        <asp:Table ID="Table1" runat="server">
-            <asp:TableHeaderRow>
-                <asp:TableHeaderCell Text="Ingresar"></asp:TableHeaderCell>
-            </asp:TableHeaderRow>
-            <asp:TableRow>
-                <asp:TableCell>
-                    <asp:Label ID="Label1" runat="server" Text="Correo"></asp:Label>
-                </asp:TableCell>
-                <asp:TableCell>
-                    <asp:TextBox ID="txtCorreo" runat="server" Height="16px"></asp:TextBox>
-                </asp:TableCell>
-                <asp:TableCell>
-                    <asp:Label ID="Label2" runat="server" Text="Contraseña"></asp:Label>
-                </asp:TableCell>
-                <asp:TableCell>
-                    <asp:TextBox ID="txtContraseña" runat="server" Height="16px"></asp:TextBox>
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow>
-
-            </asp:TableRow>
-        </asp:Table>
+        <asp:Label ID="Label1" runat="server" Text="Correo" for="txtCorreo" class="sr-only"></asp:Label>
+        <asp:TextBox ID="txtCorreo" runat="server" type="email" class="form-control" placeholder="Email address" required="true"></asp:TextBox>
+        <asp:Label ID="Label2" runat="server" Text="Contraseña" for="txtContraseña" class="sr-only"></asp:Label>
+        <asp:TextBox ID="txtContraseña" runat="server" type="password" class="form-control" placeholder="Password" required="true"></asp:TextBox>
+               
         <br />
-        <asp:Button ID="btnIngresar" runat="server" OnClick="btnIngresar_Click" Text="Ingresar" Width="114px" />
+        <asp:Button ID="btnIngresar" runat="server" OnClick="btnIngresar_Click" Text="Ingresar"  class="btn btn-lg btn-primary btn-block"/>
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
         <br />
     </form>
     
