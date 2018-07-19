@@ -53,7 +53,7 @@
                 <li><a href="#"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Mensajes</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-search"></span> Busqueda</a></li>
-                <li>
+                <li id="Button4">
                   <a href="#" data-toggle="collapse" data-target="#toggleDemo" data-parent="#sidenav01" class="collapsed">
                   <span class="glyphicon glyphicon-user"></span> Cuenta <span class="caret"></span>
                   </a>
@@ -77,16 +77,100 @@
                 <h2><p class="text-center">Main general</p></h2>
                 <br/>
                 <br/>
-                <form id="form1" runat="server">
                 <div>
                 usuario general
                     <br />
                     ID Usuario:
                     <asp:Label ID="idUsuario" runat="server" Text="Label"></asp:Label>
                 </div>
-                </form>
+            
+        
             </div>
+            <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-default btn-lg" id="myBtn">Login</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header" style="padding:35px 50px;">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+              </div>
+              <div class="modal-body" style="padding:40px 50px;">
+                <form class="form-horizontal" action="/action_page.php">
+                  <!-- inicio de Label e  input  -->
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    </div>
+                  </div>
+                  <!--  fin Label e  input  -->
+                  <!-- inicio de Label e  input  -->
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Password:</label>
+                    <div class="col-sm-8">
+                      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                    </div>
+                  </div>
+                  <!--  fin Label e  input  -->
+                  <!-- inicio de Label e  input  -->
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    </div>
+                  </div>
+                  <!--  fin Label e  input  -->
+                  <!-- inicio de Label e  input  -->
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Password:</label>
+                    <div class="col-sm-8">
+                      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                    </div>
+                  </div>
+                  <!--  fin Label e  input  -->
+
+
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <div class="checkbox">
+                        <label><input type="checkbox" name="remember"> Remember me</label>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!--  incio del button  -->
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                  </div>
+                  <!--  Fin del button  -->
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                <p>Not a member? <a href="#">Sign Up</a></p>
+                <p>Forgot <a href="#">Password?</a></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
         </div>
     </div>
+
+    <script>
+$(document).ready(function(){
+    $("#myBtn").click(function () {
+        $("#myModal").modal();
+    });
+});
+</script>
 </body>
 </html>
