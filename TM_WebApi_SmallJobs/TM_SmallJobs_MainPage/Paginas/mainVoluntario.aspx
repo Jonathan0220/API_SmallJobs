@@ -60,7 +60,7 @@
                   <div class="collapse" id="toggleDemo" style="height: 0px;">
                     <ul class="nav nav-list">
                       <li><a href="#">Ajuste</a></li>
-                      <li><a href="#">salir</a></li>
+                      <li><a href="Login.aspx">salir</a></li>
                     </ul>
                   </div>
                 </li>

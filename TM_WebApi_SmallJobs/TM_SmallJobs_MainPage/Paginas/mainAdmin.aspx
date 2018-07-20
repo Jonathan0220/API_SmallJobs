@@ -73,16 +73,20 @@
         <div class="page-header">
           <h3><span class="glyphicon glyphicon-tower"></span> Navigation</h3>
         </div>
-		    <div class="container">
+		    <div class="container" align="center">
                 <h2><p class="text-center">Main Admin</p></h2>
-                <br/>
-                <br/>
+               
                 <form id="form1" runat="server">
-                <div>
-                Usuario Admin<br />
-                    ID Usuario:
-                    <asp:Label ID="idUsuario" runat="server" Text="Label"></asp:Label>
-                </div>
+                    <asp:Button class="btn btn-default btn-lg" ID="btnAdministrarUsuarios" runat="server" Text="Administrar Usuarios" />
+                
+
+                    <br />
+                    <br />
+                
+
+                    <asp:Button class="btn btn-default btn-lg" ID="btnAdministrarTiposPedidos" runat="server" Text="Administrar Tipos de Pedidos" />
+
+
                 </form>
             </div>
         </div>

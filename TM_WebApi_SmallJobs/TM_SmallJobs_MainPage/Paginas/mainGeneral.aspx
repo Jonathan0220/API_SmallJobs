@@ -60,7 +60,7 @@
                   <div class="collapse" id="toggleDemo" style="height: 0px;">
                     <ul class="nav nav-list">
                       <li><a href="#">Ajuste</a></li>
-                      <li><a href="#">salir</a></li>
+                      <li><a href="Loggin.aspx">salir</a></li>
                     </ul>
                   </div>
                 </li>
@@ -73,7 +73,7 @@
         <div class="page-header">
           <h3><span class="glyphicon glyphicon-tower"></span> Navigation</h3>
         </div>
-		    <div class="container">
+		    <div class="container" align="center">
                 <h2><p class="text-center">Main general</p></h2>
                 <br/>
                 <br/>
@@ -83,14 +83,12 @@
                     ID Usuario:
                     <asp:Label ID="idUsuario" runat="server" Text="Label"></asp:Label>
                 </div>
-            
-        
-            </div>
-            <!-- Trigger the modal with a button -->
+             <!-- Trigger the modal with a button -->
         <button type="button" class="btn btn-default btn-lg" id="myBtn">Login</button>
-
+            </div>
+           
         <!-- Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal fade" id="myModal">
           <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -100,63 +98,73 @@
                 <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
               </div>
               <div class="modal-body" style="padding:40px 50px;">
-                <form class="form-horizontal" action="/action_page.php">
+                <form class="form-horizontal" runat="server">
                   <!-- inicio de Label e  input  -->
                   <div class="form-group">
-                    <label class="control-label col-sm-2" for="email">Email:</label>
+                    <label class="control-label col-sm-2" for="text">Nombre de Vacante</label>
                     <div class="col-sm-8">
-                      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                        <asp:TextBox runat="server" placeholder="Nombre de vacante" class="form-control" ID="txtNombreVacante" />
                     </div>
                   </div>
                   <!--  fin Label e  input  -->
                   <!-- inicio de Label e  input  -->
                   <div class="form-group">
-                    <label class="control-label col-sm-2" for="pwd">Password:</label>
+                    <label class="control-label col-sm-2" for="pwd">Descrion de vacante</label>
                     <div class="col-sm-8">
-                      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                        <asp:Textbox runat="server" placeholder="decripcion de vacante" class="form-control" ID="txtDescripcion" />
                     </div>
                   </div>
                   <!--  fin Label e  input  -->
                   <!-- inicio de Label e  input  -->
                   <div class="form-group">
-                    <label class="control-label col-sm-2" for="email">Email:</label>
-                    <div class="col-sm-8">
-                      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    <label class="control-label col-sm-2" for="email">Tipo de Pedido</label>
+                    <div class="col-sm-8" runat ="server">
+                        <asp:DropDownList runat="server" DataSourceID="SqlDataSource1" ID="ddlTipoPedido" DataTextField="Nombre" DataValueField="Nombre" class="form-control" >
+                            
+                        </asp:DropDownList>
                     </div>
                   </div>
                   <!--  fin Label e  input  -->
                   <!-- inicio de Label e  input  -->
                   <div class="form-group">
-                    <label class="control-label col-sm-2" for="pwd">Password:</label>
+                    <label class="control-label col-sm-2" for="pwd">Numero de Contacto:</label>
                     <div class="col-sm-8">
-                      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                        <asp:TextBox runat="server" placeholder="Numero de contacto" type="numeric" ID="txtNumcontacto" class="form-control"  />
                     </div>
                   </div>
-                  <!--  fin Label e  input  -->
-
-
+                     <!--  fin Label e  input  -->
+                    <!-- inicio de Label e  input  -->
                   <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <div class="checkbox">
-                        <label><input type="checkbox" name="remember"> Remember me</label>
-                      </div>
+                    <label class="control-label col-sm-2" for="pwd">Dirección:</label>
+                    <div class="col-sm-8">
+                        <asp:TextBox runat="server" placeholder="Dirección"  ID="txtDireccion" class="form-control"  />
                     </div>
                   </div>
-
-
+                     <!--  fin Label e  input  -->
+                    <!-- inicio de Label e  input  -->
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Fecha Inicio</label>
+                    <div class="col-sm-8">
+                        <asp:TextBox runat="server" placeholder="Fecha de inicio"  ID="txtFechaInicio" class="form-control"  />
+                    </div>
+                  </div>
+                    <!-- inicio de Label e  input  -->
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Fecha Fin:</label>
+                    <div class="col-sm-8">
+                        <asp:TextBox runat="server" placeholder="Fecha Fin" type="numeric" ID="txtFechaFin" class="form-control"  />
+                    </div>
+                  </div>
+                     <!--  fin Label e  input  -->
+                     <!--  fin Label e  input  -->
                   <!--  incio del button  -->
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-default">Submit</button>
+                        <asp:Button CommandName ="publicar" OnClick="Button_ModalClick" Text="Publicar" class="btn btn-default" runat="server" ID="btnPublicar" />
                     </div>
                   </div>
                   <!--  Fin del button  -->
                 </form>
-              </div>
-              <div class="modal-footer">
-                <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-                <p>Not a member? <a href="#">Sign Up</a></p>
-                <p>Forgot <a href="#">Password?</a></p>
               </div>
             </div>
 
@@ -169,8 +177,14 @@
 $(document).ready(function(){
     $("#myBtn").click(function () {
         $("#myModal").modal();
+       
     });
+
 });
 </script>
+    
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TM_SMALLJOBSConnectionString %>" SelectCommand="SELECT [Nombre] FROM [TipoPedido]"></asp:SqlDataSource>
+    
+
 </body>
 </html>

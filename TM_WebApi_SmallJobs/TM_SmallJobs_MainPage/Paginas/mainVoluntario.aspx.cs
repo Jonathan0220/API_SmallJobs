@@ -53,27 +53,9 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
 
         private void rptData_ItemCommand(object sender, RepeaterCommandEventArgs e)
         {
-            /*Label lblNombreVacante = null;
-            Label Label1 = (Label)sender;
-            RepeaterItem item = (RepeaterItem)Label1.NamingContainer;
-            Label Label2 = (Label)item.FindControl("lblnombreVacante");
-            //get value here
-            lblBoton.Text = Label2.Text;
-            foreach (RepeaterItem item in RepeaterVacante.Items) {
-                lblNombreVacante = (Label)item.FindControl("lblnombreVacante");
-
-                if (lblNombreVacante != null) {
-                lblBoton.Text = lblNombreVacante.Text;
-                    break;
-            }
-            }*/
-
             if (e.CommandName == "postular") {
                 lblBoton.Text = e.CommandArgument.ToString();
             }
-
-
-            
         }
 
     }

@@ -11,7 +11,7 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            idUsuario.Text = Convert.ToString(Loggin.ID);
+            
         }
     }
 }
