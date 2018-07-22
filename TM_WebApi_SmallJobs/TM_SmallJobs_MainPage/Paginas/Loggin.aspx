@@ -24,9 +24,15 @@
                
         <br />
         <asp:Button ID="btnIngresar" runat="server" OnClick="btnIngresar_Click" Text="Ingresar"  class="btn btn-lg btn-primary btn-block"/>
-        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+       
         <br />
+
+        <a href ="RegistroUsuarios.aspx">Resistrarte como usuario </a>
+        <footer>
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+        </footer>
     </form>
     
+     
 </body>
 </html>

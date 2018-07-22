@@ -59,8 +59,8 @@
                   </a>
                   <div class="collapse" id="toggleDemo" style="height: 0px;">
                     <ul class="nav nav-list">
-                      <li><a href="#">Ajuste</a></li>
-                      <li><a href="#">salir</a></li>
+                      <li><a href="ActualizarInformacion.aspx">Actualizar Información</a></li>
+                      <li><a href="Loggin.aspx">salir</a></li>
                     </ul>
                   </div>
                 </li>
@@ -77,16 +77,10 @@
                 <h2><p class="text-center">Main Admin</p></h2>
                
                 <form id="form1" runat="server">
-                    <asp:Button class="btn btn-default btn-lg" ID="btnAdministrarUsuarios" runat="server" Text="Administrar Usuarios" />
-                
-
+                    <asp:Button class="btn btn-default btn-lg" ID="btnAdministrarUsuarios" runat="server" Text="Administrar Usuarios" CommandName="admin_usuarios"/>
                     <br />
                     <br />
-                
-
-                    <asp:Button class="btn btn-default btn-lg" ID="btnAdministrarTiposPedidos" runat="server" Text="Administrar Tipos de Pedidos" />
-
-
+                    <asp:Button class="btn btn-default btn-lg" ID="btnAdministrarTiposPedidos" runat="server" Text="Administrar Tipos de Pedidos" CommandName="admin_pedidos" />
                 </form>
             </div>
         </div>

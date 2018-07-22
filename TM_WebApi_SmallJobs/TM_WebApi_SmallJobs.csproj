@@ -114,6 +114,7 @@
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="TM_SmallJobs_MainPage\Paginas\ActualizarInformacion.aspx" />
     <Content Include="TM_SmallJobs_MainPage\Paginas\css\bootstrap.min.css" />
     <Content Include="TM_SmallJobs_MainPage\Paginas\css\estilo.css" />
     <Content Include="TM_SmallJobs_MainPage\Paginas\css\signin.css" />
@@ -146,6 +147,13 @@
     <Compile Include="Repository\SmallJobsSqlDataContext.cs" />
     <Compile Include="Repository\TM_UsuariosRepository.cs" />
     <Compile Include="Repository\TM_VacanteRepository.cs" />
+    <Compile Include="TM_SmallJobs_MainPage\Paginas\ActualizarInformacion.aspx.cs">
+      <DependentUpon>ActualizarInformacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TM_SmallJobs_MainPage\Paginas\ActualizarInformacion.aspx.designer.cs">
+      <DependentUpon>ActualizarInformacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TM_SmallJobs_MainPage\Paginas\Loggin.aspx.cs">
       <DependentUpon>Loggin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

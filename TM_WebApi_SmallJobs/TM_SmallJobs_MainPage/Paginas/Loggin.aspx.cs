@@ -77,5 +77,10 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
                     break;
             }
         }
+
+        protected void Registrar_click(object sender, EventArgs e)
+        {
+            Response.Redirect("RegistrarUsuarios.aspx");
+        }
     }
 }

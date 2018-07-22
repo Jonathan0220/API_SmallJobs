@@ -59,8 +59,8 @@
                   </a>
                   <div class="collapse" id="toggleDemo" style="height: 0px;">
                     <ul class="nav nav-list">
-                      <li><a href="#">Ajuste</a></li>
-                      <li><a href="Login.aspx">salir</a></li>
+                      <li><a href="ActualizarInformacion.aspx">Actualizar Información</a></li>
+                      <li><a href="Loggin.aspx">salir</a></li>
                     </ul>
                   </div>
                 </li>
@@ -77,15 +77,10 @@
                 <h2><p class="text-center">Main general</p></h2>
                 <br/>
                 <br/>
-                <form id="form1" runat="server">
+                <form id="form1" runat="server" align="center">
                 <div>
                     usuario voluntario
-                    <br />
-                <asp:Label ID="lblBoton" runat="server"/>
-                   <br/>
-                    ID Usuario:
-                <asp:Label ID="idUsuario" runat="server" Text="Label"></asp:Label>
-
+               
                     <asp:Repeater ID="RepeaterVacante" runat="server">
                         <ItemTemplate >
                             <div class="tablaRepeater">

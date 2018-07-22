@@ -22,24 +22,6 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// lblBoton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBoton;
-        
-        /// <summary>
-        /// idUsuario control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label idUsuario;
-        
-        /// <summary>
         /// RepeaterVacante control.
         /// </summary>
         /// <remarks>
