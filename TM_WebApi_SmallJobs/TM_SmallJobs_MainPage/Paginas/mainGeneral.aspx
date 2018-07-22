@@ -41,16 +41,17 @@
             <div class="navbar-collapse collapse sidebar-navbar-collapse">
               <ul class="nav navbar-nav" id="sidenav01">
                 <li class="active">
-                  <a href="#" data-toggle="collapse" data-target="#toggleDemo0" data-parent="#sidenav01" class="collapsed">
+                 <a href="#" data-toggle="collapse" data-target="#toggleDemo0" data-parent="#sidenav01" class="collapsed">
                   <h4>
                   Small Jobs
-                  <br>
-                  <small> Inicia sesion</small>
+                  <br/>
+                  Bienvenido: <br/>
+                      <asp:Label Text="text" runat="server" ID ="lblNombre" />
                   </h4>
                   </a>
 
                 </li>
-                <li><a href="#"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
+                <li><a href="mainGeneral.aspx"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Mensajes</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-search"></span> Busqueda</a></li>
                 <li id="Button4">
@@ -71,7 +72,7 @@
 	    </div>
         <div class="col-sm-9 col-md-10 affix-content">
         <div class="page-header">
-          <h3><span class="glyphicon glyphicon-tower"></span> Navigation</h3>
+          <h3><span class="glyphicon glyphicon-tower"></span> Small Jobs</h3>
         </div>
 		    <div class="container" align="center">
                 <h2><p class="text-center">Main general</p></h2>
@@ -79,9 +80,7 @@
                 <br/>
                 <div>
                 usuario general
-                    <br />
-                    ID Usuario:
-                    <asp:Label ID="idUsuario" runat="server" Text="Label"></asp:Label>
+              
                 </div>
              <!-- Trigger the modal with a button -->
         <button type="button" class="btn btn-default btn-lg" id="myBtn">Login</button>

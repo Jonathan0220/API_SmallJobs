@@ -13,13 +13,13 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas {
     public partial class mainGeneral {
         
         /// <summary>
-        /// idUsuario control.
+        /// lblNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label idUsuario;
+        protected global::System.Web.UI.WebControls.Label lblNombre;
         
         /// <summary>
         /// txtNombreVacante control.

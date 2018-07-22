@@ -154,6 +154,7 @@
     <Compile Include="TM_SmallJobs_MainPage\Paginas\ActualizarInformacion.aspx.designer.cs">
       <DependentUpon>ActualizarInformacion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TM_SmallJobs_MainPage\Paginas\clases\getUsuario.cs" />
     <Compile Include="TM_SmallJobs_MainPage\Paginas\Loggin.aspx.cs">
       <DependentUpon>Loggin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

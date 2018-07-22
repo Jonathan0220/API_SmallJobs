@@ -22,7 +22,7 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
 
         public void Login(string correo, string contraseña) {
 
-            SqlConnection conn = new SqlConnection(ConnectionString.GetConnectionString("TM_SMALLJOBSConnectionStringADO"));
+            SqlConnection conn = new SqlConnection(ConnectionString.GetConnectionString("TM_SMALLJOBSConnectionString"));
             if (conn != null)
             {
                 try

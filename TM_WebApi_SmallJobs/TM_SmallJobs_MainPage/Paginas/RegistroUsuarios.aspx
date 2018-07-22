@@ -29,7 +29,7 @@
     
 		<div class="container">
         <div class="page-header">
-          <h3><span class="glyphicon glyphicon-tower"></span> Navigation</h3>
+          <h3><span class="glyphicon glyphicon-tower"></span> Small Jobs</h3>
         </div>
 
       <h2><p class="text-center">Formulario de Registro

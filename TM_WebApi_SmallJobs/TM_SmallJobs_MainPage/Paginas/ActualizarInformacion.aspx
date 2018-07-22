@@ -31,7 +31,7 @@
     
 		<div class="container">
         <div class="page-header">
-          <h3><span class="glyphicon glyphicon-tower"></span> Navigation</h3>
+          <h3><span class="glyphicon glyphicon-tower"></span> Small Jobs</h3>
         </div>
 
       <h2><p class="text-center">Actualizar Información
@@ -72,20 +72,7 @@
             </div>
           </div>
           <!--  fin Label e  input  -->
-          <!-- inicio de Label e  input  -->
-          <div class="form-group">
-            <label class="control-label col-sm-2" for="TextBox5">Tipo de usuario:</label>
-            <div class="col-sm-8">
-                <asp:DropDownList runat="server" DataSourceID="SqlDataSource1" DataTextField="Nombre" DataValueField="Nombre">
-                    <asp:ListItem Text="text1" />
-                    <asp:ListItem Text="text2" />
-                </asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TM_SMALLJOBSConnectionString %>" SelectCommand="SELECT [Nombre] FROM [tipoUsuarios] WHERE Nombre != 'Admin'"></asp:SqlDataSource>
-                
-            </div>
-          </div>
-          <!--  fin Label e  input  -->
-
+          
           <!--  incio del button  -->
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">

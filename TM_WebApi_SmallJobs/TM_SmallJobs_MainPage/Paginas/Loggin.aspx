@@ -18,9 +18,9 @@
         <h1 class="h3 mb-3 font-weight-normal">Iniciar sesion</h1>
         
         <asp:Label ID="Label1" runat="server" Text="Correo" for="txtCorreo" class="sr-only"></asp:Label>
-        <asp:TextBox ID="txtCorreo" runat="server" type="email" class="form-control" placeholder="Email address" required="true"></asp:TextBox>
+        <asp:TextBox ID="txtCorreo" runat="server" type="email" class="form-control" placeholder="Correo electronico" required="true"></asp:TextBox>
         <asp:Label ID="Label2" runat="server" Text="Contraseña" for="txtContraseña" class="sr-only"></asp:Label>
-        <asp:TextBox ID="txtContraseña" runat="server" type="password" class="form-control" placeholder="Password" required="true"></asp:TextBox>
+        <asp:TextBox ID="txtContraseña" runat="server" type="password" class="form-control" placeholder="Contraseña" required="true"></asp:TextBox>
                
         <br />
         <asp:Button ID="btnIngresar" runat="server" OnClick="btnIngresar_Click" Text="Ingresar"  class="btn btn-lg btn-primary btn-block"/>
