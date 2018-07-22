@@ -82,6 +82,42 @@
                     <br />
                     <asp:Button class="btn btn-default btn-lg" ID="btnAdministrarTiposPedidos" runat="server" Text="Administrar Tipos de Pedidos" CommandName="admin_pedidos" />
                 </form>
+
+                <asp:Table ID="Table1" runat="server" class="table table-bordred table-striped">
+                    <asp:TableRow runat="server" TableSection="TableHeader">
+                        <asp:TableHeaderCell><input type="checkbox" id="checkall" /></asp:TableHeaderCell>
+                           <asp:TableHeaderCell>First Name</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Last Name</asp:TableHeaderCell>
+                             <asp:TableHeaderCell>Address</asp:TableHeaderCell>
+                             <asp:TableHeaderCell>Email</asp:TableHeaderCell>
+                             <asp:TableHeaderCell>Contact</asp:TableHeaderCell>
+                              <asp:TableHeaderCell>Edit</asp:TableHeaderCell>
+                               <asp:TableHeaderCell>Delete</asp:TableHeaderCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell><input type="checkbox" class="checkthis" /></asp:TableCell>
+                        <asp:TableCell>Mohsin</asp:TableCell>
+                        <asp:TableCell>Irshad</asp:TableCell>
+                        <asp:TableCell>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</asp:TableCell>
+                        <asp:TableCell>isometric.mohsin@gmail.com</asp:TableCell>
+                        <asp:TableCell>+923335586757</asp:TableCell>
+                        <asp:TableCell><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></asp:TableCell>
+                        <asp:TableCell><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></asp:TableCell>
+            
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell><input type="checkbox" class="checkthis" /></asp:TableCell>
+                        <asp:TableCell>Mohsin</asp:TableCell>
+                        <asp:TableCell>Irshad</asp:TableCell>
+                        <asp:TableCell>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</asp:TableCell>
+                        <asp:TableCell>isometric.mohsin@gmail.com</asp:TableCell>
+                        <asp:TableCell>+923335586757</asp:TableCell>
+                        <asp:TableCell><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></asp:TableCell>
+                        <asp:TableCell><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></asp:TableCell>
+                        
+                    </asp:TableRow>
+
+                </asp:Table>
             </div>
         </div>
     </div>
