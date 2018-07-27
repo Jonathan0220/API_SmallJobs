@@ -53,8 +53,7 @@
 
                 </li>
                 <li><a href="mainAdmin.aspx"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Mensajes</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-search"></span> Busqueda</a></li>
+                <li><a href="Notificaciones.aspx"><span class="glyphicon glyphicon-envelope"></span> Notificaciones</a></li>
                 <li>
                   <a href="#" data-toggle="collapse" data-target="#toggleDemo" data-parent="#sidenav01" class="collapsed">
                   <span class="glyphicon glyphicon-user"></span> Cuenta <span class="caret"></span>
@@ -79,7 +78,6 @@
                 <h2><p class="text-center">Main Admin</p></h2>
                
                 <form id="form1" runat="server">
-                    <asp:Button class="btn btn-default btn-lg" ID="btnAdministrarUsuarios" runat="server" Text="Administrar Usuarios" CommandName="admin_usuarios"/>
                     <br />
                     <br />
                     <asp:Button class="btn btn-default btn-lg" ID="btnAdministrarTiposPedidos" runat="server" Text="Administrar Tipos de Pedidos" CommandName="admin_pedidos" />
@@ -88,35 +86,42 @@
                 <asp:Table ID="Table1" runat="server" class="table table-bordred table-striped">
                     <asp:TableRow runat="server" TableSection="TableHeader">
                         <asp:TableHeaderCell><input type="checkbox" id="checkall" /></asp:TableHeaderCell>
-                           <asp:TableHeaderCell>First Name</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Last Name</asp:TableHeaderCell>
-                             <asp:TableHeaderCell>Address</asp:TableHeaderCell>
-                             <asp:TableHeaderCell>Email</asp:TableHeaderCell>
-                             <asp:TableHeaderCell>Contact</asp:TableHeaderCell>
-                              <asp:TableHeaderCell>Edit</asp:TableHeaderCell>
-                               <asp:TableHeaderCell>Delete</asp:TableHeaderCell>
+                           <asp:TableHeaderCell>idUsuario</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Nombre</asp:TableHeaderCell>
+                             <asp:TableHeaderCell>Correo</asp:TableHeaderCell>
+                             <asp:TableHeaderCell>Ubicacion</asp:TableHeaderCell>
+                             <asp:TableHeaderCell>Tipo Usuario</asp:TableHeaderCell>
                     </asp:TableRow>
                     <asp:TableRow runat="server">
                         <asp:TableCell><input type="checkbox" class="checkthis" /></asp:TableCell>
-                        <asp:TableCell>Mohsin</asp:TableCell>
-                        <asp:TableCell>Irshad</asp:TableCell>
-                        <asp:TableCell>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</asp:TableCell>
-                        <asp:TableCell>isometric.mohsin@gmail.com</asp:TableCell>
-                        <asp:TableCell>+923335586757</asp:TableCell>
+                        <asp:TableCell>1</asp:TableCell>
+                        <asp:TableCell>Teno</asp:TableCell>
+                        <asp:TableCell>teno@prueba.com</asp:TableCell>
+                        <asp:TableCell>Garcia</asp:TableCell>
+                        <asp:TableCell>General</asp:TableCell>
                         <asp:TableCell><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></asp:TableCell>
                         <asp:TableCell><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></asp:TableCell>
             
                     </asp:TableRow>
                     <asp:TableRow runat="server">
                         <asp:TableCell><input type="checkbox" class="checkthis" /></asp:TableCell>
-                        <asp:TableCell>Mohsin</asp:TableCell>
-                        <asp:TableCell>Irshad</asp:TableCell>
-                        <asp:TableCell>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</asp:TableCell>
-                        <asp:TableCell>isometric.mohsin@gmail.com</asp:TableCell>
-                        <asp:TableCell>+923335586757</asp:TableCell>
+                        <asp:TableCell>2</asp:TableCell>
+                        <asp:TableCell>Jorge</asp:TableCell>
+                        <asp:TableCell>jorge@prueba.com</asp:TableCell>
+                        <asp:TableCell>Santa Catarina</asp:TableCell>
+                        <asp:TableCell>Voluntario</asp:TableCell>
                         <asp:TableCell><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></asp:TableCell>
                         <asp:TableCell><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></asp:TableCell>
-                        
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell><input type="checkbox" class="checkthis" /></asp:TableCell>
+                        <asp:TableCell>2</asp:TableCell>
+                        <asp:TableCell>Jonathan</asp:TableCell>
+                        <asp:TableCell>jona15@prueba.com</asp:TableCell>
+                        <asp:TableCell>San Pedro</asp:TableCell>
+                        <asp:TableCell>Administrador</asp:TableCell>
+                        <asp:TableCell><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></asp:TableCell>
+                        <asp:TableCell><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></asp:TableCell>
                     </asp:TableRow>
 
                 </asp:Table>

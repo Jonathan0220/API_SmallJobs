@@ -40,9 +40,9 @@
 
           <!-- inicio de Label e  input  -->
           <div class="form-group">
-            <label class="control-label col-sm-2" for="TextBox1">Name:</label>
+            <label class="control-label col-sm-2" for="TextBox1">Nombre:</label>
             <div class="col-sm-8">
-                <asp:TextBox ID="TextBox1" runat="server" type="text" class="form-control"  placeholder="Enter your name"></asp:TextBox>
+                <asp:TextBox ID="TextBox1" runat="server" type="text" class="form-control"  placeholder="Ingresa tu Nombre" required="true"></asp:TextBox>
             </div>
           </div>
           <!--  fin Label e  input  -->
@@ -50,15 +50,15 @@
           <div class="form-group">
             <label class="control-label col-sm-2" for="TextBox2">Correo:</label>
             <div class="col-sm-8">
-                <asp:TextBox ID="TextBox2" runat="server" type="email" class="form-control"  placeholder="Enter your email"></asp:TextBox>
+                <asp:TextBox ID="TextBox2" runat="server" type="email" class="form-control"  placeholder="Ingresa tu email" required="true"></asp:TextBox>
             </div>
           </div>
           <!--  fin Label e  input  -->
           <!-- inicio de Label e  input  -->
           <div class="form-group">
-            <label class="control-label col-sm-2" for="TextBox3">password:</label>
+            <label class="control-label col-sm-2" for="TextBox3">Contraseña:</label>
             <div class="col-sm-8">
-                <asp:TextBox ID="TextBox3" runat="server" type="password" class="form-control"  placeholder="Enter your password"></asp:TextBox>
+                <asp:TextBox ID="TextBox3" runat="server" type="password" class="form-control"  placeholder="Ingresa tu contraseña" required="true"></asp:TextBox>
             </div>
           </div>
           <!--  fin Label e  input  -->
@@ -66,7 +66,7 @@
           <div class="form-group">
             <label class="control-label col-sm-2" for="TextBox4">Ubicacion:</label>
             <div class="col-sm-8">
-                <asp:TextBox ID="TextBox4" runat="server" type="text" class="form-control"  placeholder="Enter your ubication"></asp:TextBox>
+                <asp:TextBox ID="TextBox4" runat="server" type="text" class="form-control"  placeholder="Ingresa tu ubicación" required="true"></asp:TextBox>
             </div>
           </div>
           <!--  fin Label e  input  -->
@@ -74,7 +74,11 @@
           <div class="form-group">
             <label class="control-label col-sm-2" for="TextBox5">Tipo de usuario:</label>
             <div class="col-sm-8">
-                <asp:TextBox ID="TextBox5" runat="server" type="text" class="form-control"  placeholder="Enter your type of user"></asp:TextBox>
+                <asp:DropDownList runat="server" DataSourceID="SqlDataSource1" DataTextField="Nombre" DataValueField="Nombre" ID="ddlTipousuarios">
+                    <asp:ListItem Text="text1" />
+                    <asp:ListItem Text="text2" />
+                </asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TM_SMALLJOBSConnectionString %>" SelectCommand="SELECT [Nombre] FROM [tipoUsuarios]"></asp:SqlDataSource>
             </div>
           </div>
           <!--  fin Label e  input  -->

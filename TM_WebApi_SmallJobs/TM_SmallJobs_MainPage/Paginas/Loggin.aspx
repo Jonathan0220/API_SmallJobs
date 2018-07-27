@@ -26,7 +26,7 @@
         <asp:Button ID="btnIngresar" runat="server" OnClick="btnIngresar_Click" Text="Ingresar"  class="btn btn-lg btn-primary btn-block"/>
        
         <br />
-
+        <asp:Label ID="lblValidacion" Text="" runat="server" /><br />
         <a href ="RegistroUsuarios.aspx">Resistrarte como usuario </a>
         <footer>
         <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>

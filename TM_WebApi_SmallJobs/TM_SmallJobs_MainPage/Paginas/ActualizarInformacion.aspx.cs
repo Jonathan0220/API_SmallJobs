@@ -36,29 +36,23 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
         }
 
         protected void Button1_Click(object sender, EventArgs e) {
+            actualizar_usuario(txtNombre.Text, txtCorreo.Text, txtContraseña.Text, txtUbicacion.Text);
+        }
+
+        private void actualizar_usuario(string Nombre, string Correo, string Contraseña, string Ubicacion){
+        
             SqlConnection cnn = new SqlConnection(ConnectionString.GetConnectionString("TM_SMALLJOBSConnectionString"));
-            cnn.Open();
             SqlCommand cmdUpdVacante = new SqlCommand("sp_ActualizaUsuario", cnn);
             cmdUpdVacante.CommandType = CommandType.StoredProcedure;
-
-            cmdUpdVacante.Parameters.Add(new SqlParameter("@Nombre", SqlDbType.VarChar));
-            cmdUpdVacante.Parameters["@Nombre"].Value = txtNombre.Text;
-
-            cmdUpdVacante.Parameters.Add(new SqlParameter("@Correo", SqlDbType.VarChar));
-            cmdUpdVacante.Parameters["@Correo"].Value = txtCorreo.Text;
-
-            cmdUpdVacante.Parameters.Add(new SqlParameter("@Contraseña", SqlDbType.VarChar));
-            cmdUpdVacante.Parameters["@Contraseña"].Value = txtContraseña.Text;
-
-            cmdUpdVacante.Parameters.Add(new SqlParameter("@Ubicacion", SqlDbType.VarChar));
-            cmdUpdVacante.Parameters["@Ubicacion"].Value = txtUbicacion.Text;
-
-            cmdUpdVacante.ExecuteNonQuery();
+            cmdUpdVacante.Parameters.AddWithValue("@Nombre", Nombre);
+            cmdUpdVacante.Parameters.AddWithValue("@Correo", Correo);
+            cmdUpdVacante.Parameters.AddWithValue("@Contraseña", Contraseña);
+            cmdUpdVacante.Parameters.AddWithValue("@Ubicacion", Ubicacion);
+            cnn.Open();
+            var resultado = cmdUpdVacante.ExecuteNonQuery();
 
             cnn.Close();
-
-            obtenerDatosUsuario();
-
+            
         }
     }
 }

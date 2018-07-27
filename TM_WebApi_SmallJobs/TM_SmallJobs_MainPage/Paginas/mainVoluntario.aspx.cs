@@ -72,6 +72,8 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
         {
             if (e.CommandName == "postular") {
                
+
+
             }
         }
 

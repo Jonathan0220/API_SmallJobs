@@ -124,6 +124,8 @@
     <Content Include="TM_SmallJobs_MainPage\Paginas\mainAdmin.aspx" />
     <Content Include="TM_SmallJobs_MainPage\Paginas\mainGeneral.aspx" />
     <Content Include="TM_SmallJobs_MainPage\Paginas\mainVoluntario.aspx" />
+    <Content Include="TM_SmallJobs_MainPage\Paginas\maps.aspx" />
+    <Content Include="TM_SmallJobs_MainPage\Paginas\Notificaciones.aspx" />
     <Content Include="TM_SmallJobs_MainPage\Paginas\RegistroUsuarios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -182,6 +184,20 @@
     </Compile>
     <Compile Include="TM_SmallJobs_MainPage\Paginas\mainVoluntario.aspx.designer.cs">
       <DependentUpon>mainVoluntario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TM_SmallJobs_MainPage\Paginas\maps.aspx.cs">
+      <DependentUpon>maps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TM_SmallJobs_MainPage\Paginas\maps.aspx.designer.cs">
+      <DependentUpon>maps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TM_SmallJobs_MainPage\Paginas\Notificaciones.aspx.cs">
+      <DependentUpon>Notificaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TM_SmallJobs_MainPage\Paginas\Notificaciones.aspx.designer.cs">
+      <DependentUpon>Notificaciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="TM_SmallJobs_MainPage\Paginas\RegistroUsuarios.aspx.cs">
       <DependentUpon>RegistroUsuarios.aspx</DependentUpon>

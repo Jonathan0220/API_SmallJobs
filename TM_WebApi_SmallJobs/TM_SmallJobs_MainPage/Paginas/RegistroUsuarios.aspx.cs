@@ -55,14 +55,14 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            int exito = registro(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text);
+            int exito = registro(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, ddlTipousuarios.Text);
             switch (exito){
                 case 1:
-                    //El registro se completo correctamente
+                    
                     break;
 
                 default:
-                    //Correo ya se esta utilizando
+                    
                     break;
             }
 

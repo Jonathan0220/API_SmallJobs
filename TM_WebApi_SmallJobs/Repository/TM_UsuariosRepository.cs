@@ -71,7 +71,6 @@ namespace TM_WebApi_SmallJobs.Repository
 
             cmdUpdVacante.Parameters.Add(new SqlParameter("@Ubicacion", SqlDbType.VarChar));
             cmdUpdVacante.Parameters["@Ubicacion"].Value = musuario.ubicacion;
-
             try
             {
                 conn.Open();

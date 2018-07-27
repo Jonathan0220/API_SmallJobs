@@ -52,8 +52,7 @@
 
                 </li>
                 <li><a href="mainGeneral.aspx"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Mensajes</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-search"></span> Busqueda</a></li>
+                <li><a href="Notificaciones.aspx"><span class="glyphicon glyphicon-envelope"></span> Notificaciones</a></li>
                 <li id="Button4">
                   <a href="#" data-toggle="collapse" data-target="#toggleDemo" data-parent="#sidenav01" class="collapsed">
                   <span class="glyphicon glyphicon-user"></span> Cuenta <span class="caret"></span>
@@ -75,15 +74,12 @@
           <h3><span class="glyphicon glyphicon-tower"></span> Small Jobs</h3>
         </div>
 		    <div class="container" align="center">
-                <h2><p class="text-center">Main general</p></h2>
+                
                 <br/>
                 <br/>
-                <div>
-                usuario general
-              
-                </div>
+                
              <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-default btn-lg" id="myBtn">Login</button>
+        <button type="button" class="btn btn-default btn-lg" id="myBtn">Publicar Vacante</button>
             </div>
            
         <!-- Modal -->
@@ -102,7 +98,7 @@
                   <div class="form-group">
                     <label class="control-label col-sm-2" for="text">Nombre de Vacante</label>
                     <div class="col-sm-8">
-                        <asp:TextBox runat="server" placeholder="Nombre de vacante" class="form-control" ID="txtNombreVacante" />
+                        <asp:TextBox runat="server" placeholder="Nombre de vacante" class="form-control" ID="txtNombreVacante" required="true" />
                     </div>
                   </div>
                   <!--  fin Label e  input  -->
@@ -110,7 +106,7 @@
                   <div class="form-group">
                     <label class="control-label col-sm-2" for="pwd">Descrion de vacante</label>
                     <div class="col-sm-8">
-                        <asp:Textbox runat="server" placeholder="decripcion de vacante" class="form-control" ID="txtDescripcion" />
+                        <asp:Textbox runat="server" placeholder="decripcion de vacante" class="form-control" ID="txtDescripcion" required="true" />
                     </div>
                   </div>
                   <!--  fin Label e  input  -->
@@ -128,7 +124,7 @@
                   <div class="form-group">
                     <label class="control-label col-sm-2" for="pwd">Numero de Contacto:</label>
                     <div class="col-sm-8">
-                        <asp:TextBox runat="server" placeholder="Numero de contacto" type="numeric" ID="txtNumcontacto" class="form-control"  />
+                        <asp:TextBox runat="server" placeholder="Numero de contacto" type="numeric" ID="txtNumcontacto" class="form-control" required="true" />
                     </div>
                   </div>
                      <!--  fin Label e  input  -->
@@ -144,14 +140,14 @@
                   <div class="form-group">
                     <label class="control-label col-sm-2" for="pwd">Fecha Inicio</label>
                     <div class="col-sm-8">
-                        <asp:TextBox runat="server" placeholder="Fecha de inicio"  ID="txtFechaInicio" class="form-control"  />
+                        <asp:TextBox runat="server" placeholder="Fecha de inicio"  ID="txtFechaInicio" class="form-control" required="true"  />
                     </div>
                   </div>
                     <!-- inicio de Label e  input  -->
                   <div class="form-group">
                     <label class="control-label col-sm-2" for="pwd">Fecha Fin:</label>
                     <div class="col-sm-8">
-                        <asp:TextBox runat="server" placeholder="Fecha Fin" type="numeric" ID="txtFechaFin" class="form-control"  />
+                        <asp:TextBox runat="server" placeholder="Fecha Fin" type="numeric" ID="txtFechaFin" class="form-control" required="true" />
                     </div>
                   </div>
                      <!--  fin Label e  input  -->
