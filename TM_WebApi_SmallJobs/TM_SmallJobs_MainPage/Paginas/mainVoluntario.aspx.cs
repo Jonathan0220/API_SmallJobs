@@ -18,16 +18,11 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-
             if (!IsPostBack)
             {
                 BindRepeater();
-
             }
             obtenerDatosUsuario(); 
-
-
         }
 
         private void obtenerDatosUsuario()
@@ -56,7 +51,6 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
                         RepeaterVacante.DataBind();
                     }
                 }
-
             }
 
         }

@@ -23,7 +23,7 @@ Contraseña varchar(50), Ubicacion varchar(50), tipoUsuario varchar(50));
         CREATE PROCEDURE sp_ConsultaUsuarios @Correo varchar (50) as SELECT * FROM Usuarios WHERE @Correo = Correo;
         --Procedure Actualizacion 
         CREATE PROCEDURE sp_ActualizaUsuario @Nombre varchar(50), @Correo varchar(50), @Contraseña varchar(50), @Ubicacion varchar (50) 
-        as UPDATE Usuarios SET Nombre = Nombre, @Correo = Correo, @Contraseña = Contraseña, @Ubicacion = Ubicacion WHERE Correo = @Correo;
+        as UPDATE Usuarios SET Nombre = @Nombre, Correo = @Correo, Contraseña = @Contraseña, Ubicacion = @Ubicacion WHERE Correo = @Correo;
 
 
 --Tabla de vacante

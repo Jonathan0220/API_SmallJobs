@@ -34,30 +34,20 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
                 try
                 {
                     conn.Open();
-                SqlCommand cmd = new SqlCommand("sp_loggin", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.AddWithValue("@Correo", correo);
-                cmd.Parameters.AddWithValue("@Contraseña", contraseña);
-
+                    SqlCommand cmd = new SqlCommand("sp_loggin", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Correo", correo);
+                    cmd.Parameters.AddWithValue("@Contraseña", contraseña);
                     if (cmd != null)
                     {
                         SqlDataReader dr = cmd.ExecuteReader();
-
-
                         if (dr != null && dr.Read())
                         {
                             ID = Convert.ToInt32(dr["idUsuario"]);
                             tipoUsuario = Convert.ToString(dr["tipoUsuario"]);
                             return 1;
-                        }
-                        else {
-                            return 0;
-                        }
-                    }
-                    else {
-                        return 0;
-                    }
+                        }else {return 0;}
+                    }else {return 0;}
                 }
                 catch (Exception ex)
                 {

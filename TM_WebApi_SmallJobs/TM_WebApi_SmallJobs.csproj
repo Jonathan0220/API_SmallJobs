@@ -217,6 +217,7 @@
       <LastGenOutput>SmallJobsSql.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="BD_SmallJobs\TM_SMALLJOBS.bak" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

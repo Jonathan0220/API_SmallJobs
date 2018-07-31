@@ -73,7 +73,7 @@
           <h3><span class="glyphicon glyphicon-tower"></span> Small Jobs</h3>
         </div>
 		    <div class="container">
-                <h2><p class="text-center">Main general</p></h2>
+                <h2><p class="text-center">Voluntario</p></h2>
                 <br/>
                 <br/>
                 <form id="form1" runat="server" align="center">
@@ -83,7 +83,7 @@
                     <asp:Repeater ID="RepeaterVacante" runat="server">
                         <ItemTemplate >
                             <div class="tablaRepeater">
-                                <table class="tg">
+                                <table class="tg" width="900px" border="1">
                                     <tr>
                                         <th class="tr_nombre-vacante" colspan="3">
                                             <asp:Label ID="lblnombreVacante" Text='<%# Eval("NombreVacante") %>' runat="server" />
@@ -121,6 +121,8 @@
                                         </td>
                                     </tr>
                                 </table>
+                                <br />
+                                <br />
                             </div>
                         </ItemTemplate>
                     </asp:Repeater>
