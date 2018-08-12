@@ -36,7 +36,6 @@ C:\Users\migue\Documents\GitHub\API_SmallJobs\TM_WebApi_SmallJobs\bin\Newtonsoft
 C:\Users\migue\Documents\GitHub\API_SmallJobs\TM_WebApi_SmallJobs\bin\System.Net.Http.Formatting.xml
 C:\Users\migue\Documents\GitHub\API_SmallJobs\TM_WebApi_SmallJobs\bin\System.Web.Http.xml
 C:\Users\migue\Documents\GitHub\API_SmallJobs\TM_WebApi_SmallJobs\bin\System.Web.Http.WebHost.xml
-C:\Users\migue\Documents\GitHub\API_SmallJobs\TM_WebApi_SmallJobs\obj\Debug\TM_WebApi_SmallJobs.csprojResolveAssemblyReference.cache
 C:\Users\migue\Documents\GitHub\API_SmallJobs\TM_WebApi_SmallJobs\obj\Debug\TM_WebApi_SmallJobs.dll
 C:\Users\migue\Documents\GitHub\API_SmallJobs\TM_WebApi_SmallJobs\obj\Debug\TM_WebApi_SmallJobs.pdb
 C:\Users\jony1\Documents\GitHub\API_SmallJobs\TM_WebApi_SmallJobs\bin\ApplicationInsights.config
@@ -80,3 +79,4 @@ C:\Users\jony1\Documents\GitHub\API_SmallJobs\TM_WebApi_SmallJobs\bin\System.Web
 C:\Users\jony1\Documents\GitHub\API_SmallJobs\TM_WebApi_SmallJobs\obj\Debug\TM_WebApi_SmallJobs.csprojResolveAssemblyReference.cache
 C:\Users\jony1\Documents\GitHub\API_SmallJobs\TM_WebApi_SmallJobs\obj\Debug\TM_WebApi_SmallJobs.dll
 C:\Users\jony1\Documents\GitHub\API_SmallJobs\TM_WebApi_SmallJobs\obj\Debug\TM_WebApi_SmallJobs.pdb
+C:\Users\migue\Documents\GitHub\API_SmallJobs\TM_WebApi_SmallJobs\obj\Debug\TM_WebApi_SmallJobs.csprojResolveAssemblyReference.cache

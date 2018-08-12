@@ -23,6 +23,51 @@
           window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
         });
     </script>
+    <script>
+    function capturar()
+    {
+        
+        var porId=document.getElementById("nombre").value;
+        var datalist =[
+          document.getElementById("TextBox1").value,
+          document.getElementById("TextBox2").value,
+          document.getElementById("TextBox3").value,
+          document.getElementById("TextBox4").value,
+          document.getElementById("ddlTipousuarios").value];
+        //console.log("Por elementos: "+porElementos);
+        console.log(datalist[0] +", "+ datalist[1] +", "+ datalist[2] +", "+ datalist[3] +", "+ datalist[4]);
+            return datalist
+    }
+    </script>
+    <script>
+    function enviarformulario(){
+      var obtenerdatos = capturar();
+      var data = JSON.stringify({
+          "nombre": obtenerdatos[0],
+          "correo": obtenerdatos[1],
+          "contraseña": obtenerdatos[2],
+          "ubicacion": obtenerdatos[3],
+          "tipoUsuario": obtenerdatos[4]
+        });
+        console.log(obtenerdatos[0] +", "+ obtenerdatos[1] +", "+ obtenerdatos[2] +", "+ obtenerdatos[3] +", "+ obtenerdatos[4]);
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
+
+        xhr.addEventListener("readystatechange", function () {
+          if (this.readyState === 4) {
+            console.log(this.responseText);
+          }
+        });
+
+        xhr.open("POST", "http://localhost:57048/api/smalljobs?clave=7");
+        xhr.setRequestHeader("content-type", "application/json");
+        xhr.setRequestHeader("cache-control", "no-cache");
+        xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+        xhr.setRequestHeader("Access-Control-Allow-Methods", "POST,OPTIONS");
+        xhr.setRequestHeader("Access-Control-Allow-Headers", "Content-Type");
+        xhr.send(data);
+    }
+    </script>
 </head>
 <body>
     <div class="row affix-row">
@@ -38,7 +83,7 @@
       <br/>
           <form class="form-horizontal" id="form1" runat="server">
 
-          <!-- inicio de Label e  input  -->
+          <!-- inicio de Label e  input libreria de java scrip  alterna <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>  -->
           <div class="form-group">
             <label class="control-label col-sm-2" for="TextBox1">Nombre:</label>
             <div class="col-sm-8">
@@ -87,6 +132,7 @@
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Guardar" class="btn btn-default" />
+                <!--  <asp:Button ID="Button1" runat="server" OnClick="enviarformulario()" Text="Guardar" class="btn btn-default" />  -->
             </div>
           </div>
           <!--  Fin del button  -->
