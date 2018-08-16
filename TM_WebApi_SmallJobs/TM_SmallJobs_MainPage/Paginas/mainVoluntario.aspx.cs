@@ -72,6 +72,7 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
         /* Obtener el usuario que publico la vacante*/
 
         private void aplicar_vacante(int idVacante, int idUsuario) {
+            string mensaje = "Un usuario con el nombre " + lblNombre.Text + " ah aplicado a su vacante";
             var constr = ConfigurationManager.ConnectionStrings["TM_SMALLJOBSConnectionString"].ConnectionString;
             SqlConnection conn = new SqlConnection(constr);
             conn.Open();
@@ -80,6 +81,8 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
 
             cmd.Parameters.AddWithValue("@idVacante", idVacante);
             cmd.Parameters.AddWithValue("@idUsuarioActual", idUsuario);
+            cmd.Parameters.AddWithValue("@idUsuarioDestino", 4);
+            cmd.Parameters.AddWithValue("@Descripcion", mensaje);
 
             var resultado = cmd.ExecuteNonQuery();
             switch (resultado) {

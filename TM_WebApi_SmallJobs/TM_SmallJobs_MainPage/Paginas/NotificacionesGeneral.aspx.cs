@@ -12,6 +12,12 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
 {
     public partial class NotificacionesGeneral : System.Web.UI.Page
     {
+
+        /*General manda a voluntario 
+            
+            voluntario = 3
+             
+             */
         private int idUsuario = Loggin.ID;
         private string tipoUsuario;
         private string Usuario = "";
@@ -37,7 +43,7 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
             string mensaje = "";
             if (e.CommandName.Equals("Rechaza"))
             {
-                mensaje = "El usuario " + Usuario + " ha rechazado tu oferta";
+                mensaje = "El usuario " + Usuario + " ha rechazado tu oferta, sigue buscando";
 
             }
             else if (e.CommandName.Equals("Acepta")) {
@@ -47,7 +53,8 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
             SqlConnection cnn = new SqlConnection(constr);
             cnn.Open();
 
-            SqlCommand cmd = new SqlCommand("INSERT INTO Notificaciones ");
+            SqlCommand cmd = new SqlCommand("INSERT INTO Notificacion (idUsuarioActual, idUsuarioDestino, Descripcion) values (" + idUsuario + ", 3, '" + mensaje + "');", cnn);
+            cmd.ExecuteNonQuery();
 
 
         }
