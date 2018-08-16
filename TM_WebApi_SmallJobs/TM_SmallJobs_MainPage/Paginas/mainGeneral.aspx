@@ -52,7 +52,7 @@
 
                 </li>
                 <li><a href="mainGeneral.aspx"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
-                <li><a href="Notificaciones.aspx"><span class="glyphicon glyphicon-envelope"></span> Notificaciones</a></li>
+                <li><a href="NotificacionesGeneral.aspx"><span class="glyphicon glyphicon-envelope"></span> Notificaciones</a></li>
                 <li id="Button4">
                   <a href="#" data-toggle="collapse" data-target="#toggleDemo" data-parent="#sidenav01" class="collapsed">
                   <span class="glyphicon glyphicon-user"></span> Cuenta <span class="caret"></span>

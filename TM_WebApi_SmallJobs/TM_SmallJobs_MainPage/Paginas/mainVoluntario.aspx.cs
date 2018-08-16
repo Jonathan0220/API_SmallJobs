@@ -65,10 +65,36 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
         private void rptData_ItemCommand(object sender, RepeaterCommandEventArgs e)
         {
             if (e.CommandName == "postular") {
-               
+                aplicar_vacante(Convert.ToInt32(e.CommandArgument), idUsuario);
+            }
+        }
 
+        /* Obtener el usuario que publico la vacante*/
+
+        private void aplicar_vacante(int idVacante, int idUsuario) {
+            var constr = ConfigurationManager.ConnectionStrings["TM_SMALLJOBSConnectionString"].ConnectionString;
+            SqlConnection conn = new SqlConnection(constr);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("sp_aplicarvacante", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@idVacante", idVacante);
+            cmd.Parameters.AddWithValue("@idUsuarioActual", idUsuario);
+
+            var resultado = cmd.ExecuteNonQuery();
+            switch (resultado) {
+                case 1:
+                    lblresultado.Text = "Exito";
+                    break;
+
+                case -1:
+                    lblresultado.Text = "Ya aplico a esta vacante";
+                    break;
 
             }
+
+                
+            
         }
 
     }

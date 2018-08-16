@@ -10,25 +10,34 @@
 namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas {
     
     
-    public partial class mainVoluntario {
+    public partial class NotificacionesGeneral {
         
         /// <summary>
-        /// lblNombre control.
+        /// Table2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombre;
+        protected global::System.Web.UI.WebControls.Table Table2;
         
         /// <summary>
-        /// lblresultado control.
+        /// btnRehazar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblresultado;
+        protected global::System.Web.UI.WebControls.Button btnRehazar;
+        
+        /// <summary>
+        /// btnAceptar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAceptar;
         
         /// <summary>
         /// form1 control.
@@ -38,14 +47,5 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// RepeaterVacante control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RepeaterVacante;
     }
 }

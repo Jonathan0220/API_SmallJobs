@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Notificaciones.aspx.cs" Inherits="TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas.Notificaciones" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NotificacionesVoluntario.aspx.cs" Inherits="TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas.Notificaciones" %>
 
 <!DOCTYPE html>
 

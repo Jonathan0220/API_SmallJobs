@@ -51,7 +51,7 @@
                   </a>
                 </li>
                 <li><a href="mainVoluntario.aspx"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
-                <li><a href="Notificaciones.aspx"><span class="glyphicon glyphicon-envelope"></span> Notificaciones</a></li>
+                <li><a href="NotificacionesVoluntario.aspx"><span class="glyphicon glyphicon-envelope"></span> Notificaciones</a></li>
                 <li>
                   <a href="#" data-toggle="collapse" data-target="#toggleDemo" data-parent="#sidenav01" class="collapsed">
                   <span class="glyphicon glyphicon-user"></span> Cuenta <span class="caret"></span>
@@ -75,6 +75,7 @@
 		    <div class="container">
                 <h2><p class="text-center">Voluntario</p></h2>
                 <br/>
+                <asp:Label ID="lblresultado" Text="text" runat="server" />
                 <br/>
                 <form id="form1" runat="server" align="center">
                 <div>

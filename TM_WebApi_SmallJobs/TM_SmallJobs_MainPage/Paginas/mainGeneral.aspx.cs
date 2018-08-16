@@ -37,7 +37,7 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
 
         protected void Button_ModalClick(object sender, EventArgs e)
         {
-
+            /* insert de tabla vacantes*/
         }
     }
 }
