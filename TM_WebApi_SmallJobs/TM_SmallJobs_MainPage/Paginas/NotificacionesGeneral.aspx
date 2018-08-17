@@ -26,7 +26,7 @@
     </head>
 <body>
 
-    <div>
+    
         <div class="row affix-row">
     
 		<div class="container">
@@ -34,31 +34,31 @@
           <h3><span class="glyphicon glyphicon-tower"></span> Small Jobs</h3>
         </div>
             <p>Vacantes Pendientes</p>
-             <asp:Table ID="Table2" runat="server" class="table table-bordred table-striped">
-                    <asp:TableRow runat="server" TableSection="TableHeader">
-                           <asp:TableHeaderCell>idVacante</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Nombre Vacante</asp:TableHeaderCell>
-                             <asp:TableHeaderCell>Fecha inicio</asp:TableHeaderCell>
-                             <asp:TableHeaderCell>Fecha Fin</asp:TableHeaderCell>
-                             <asp:TableHeaderCell>Voluntario</asp:TableHeaderCell>
-                    </asp:TableRow>
-                    <asp:TableRow runat="server">
-                        <asp:TableCell>1</asp:TableCell>
-                        <asp:TableCell>Trabajo de Plomeria</asp:TableCell>
-                        <asp:TableCell>26/07/2018</asp:TableCell>
-                        <asp:TableCell>30/07/2018</asp:TableCell>
-                        <asp:TableCell>Jorge</asp:TableCell>
-                        <asp:TableCell>Rechazar vacante <p data-placement="top" data-toggle="tooltip" title="Edit"><asp:Button runat="server" id ="btnRehazar" CommandName="Rechaza" OnClick="sendNotification" class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ></asp:Button><span class="glyphicon glyphicon-pencil"></span></p></asp:TableCell>
-                        <asp:TableCell>Aceptar vacante <p data-placement="top" data-toggle="tooltip" title="Edit"><asp:Button runat="server" id ="btnAceptar" OnClick="sendNotification" CommandName="Acepta" class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ></asp:Button><span class="glyphicon glyphicon-pencil"></span></p></asp:TableCell>
-                    </asp:TableRow>
-                </asp:Table> </div>
+             
+           <form id="form1" runat="server">
+     <div>
+    <asp:GridView ID="GridView1" class="table table-bordred table-striped" runat="server" AutoGenerateColumns="False" DataKeyNames="idVacante" DataSourceID="SqlDataSource1">
+        <Columns>
+            <asp:BoundField DataField="idVacante" HeaderText="idVacante" InsertVisible="False" ReadOnly="True" SortExpression="idVacante" />
+            <asp:BoundField DataField="NombreVacante" HeaderText="NombreVacante" SortExpression="NombreVacante" />
+            <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+            <asp:BoundField DataField="TipoPedido" HeaderText="TipoPedido" SortExpression="TipoPedido" />
+            <asp:BoundField DataField="FechaInicio" HeaderText="FechaInicio" SortExpression="FechaInicio" />
+            <asp:BoundField DataField="FechaFin" HeaderText="FechaFin" SortExpression="FechaFin" />
+        </Columns>
+         </asp:GridView>
+         
+         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TM_SMALLJOBSConnectionStringADO %>" SelectCommand="
+  SELECT [idVacante],[NombreVacante],[Descripcion],[TipoPedido],[FechaInicio],[FechaFin] FROM [TM_SMALLJOBS].[dbo].[Vacante]
+
+"></asp:SqlDataSource>
+         
+    </div>
+        
+    </form>
             </div>
         </div>
 
-    <form id="form1" runat="server">
-    <div>
     
-    </div>
-    </form>
 </body>
 </html>

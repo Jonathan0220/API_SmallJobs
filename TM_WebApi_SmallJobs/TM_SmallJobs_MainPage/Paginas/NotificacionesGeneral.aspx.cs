@@ -7,11 +7,13 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
 using TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas.clases;
+using System.Data;
 
 namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
 {
     public partial class NotificacionesGeneral : System.Web.UI.Page
     {
+
 
         /*General manda a voluntario 
             
@@ -24,7 +26,41 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            obtenerDatosUsuario();
+            //obtenerDatosUsuario();
+            //llenartabla();
+
+        }
+        private void llenartabla()
+        {
+
+           //string strConnString = ConfigurationManager.ConnectionStrings["TM_SMALLJOBSConnectionString"].ConnectionString;
+            //SqlConnection myConnection = new SqlConnection(strConnString);
+
+            //string strSQLSelect = "SELECT * FROM ADMS_Machining ";
+            SqlConnection myConnection = new SqlConnection();
+            myConnection.ConnectionString = "Data Source=localhost;Initial Catalog=TM_SMALLJOBS;Integrated Security=True;";
+            string strSQLSelect = "SELECT [idVacante],[NombreVacante],[Descripcion],[TipoPedido],[FechaInicio],[FechaFin] FROM [TM_SMALLJOBS].[dbo].[Vacante]";
+            SqlCommand selectCommand = new SqlCommand(strSQLSelect, myConnection);
+            selectCommand.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter Adapter = new SqlDataAdapter(selectCommand);
+            try
+            {
+                myConnection.Open();
+                DataSet ds = new DataSet();
+                Adapter.Fill(ds, "Producto");
+                GridView1.DataSource = ds;
+                GridView1.DataBind();
+            }
+            catch (Exception err)
+            {
+
+                Console.Write(err);
+            }
+            finally
+            {
+                myConnection.Close();
+            }
+
         }
 
         private void obtenerDatosUsuario() {
