@@ -131,7 +131,7 @@
           <!--  incio del button  -->
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Guardar" class="btn btn-default" />
+                <asp:Button ID="Button1" runat="server"  OnClick="enviarformulario()"  Text="Guardar" class="btn btn-default" />
                 <!--  <asp:Button ID="Button1" runat="server" OnClick="enviarformulario()" Text="Guardar" class="btn btn-default" />  -->
             </div>
           </div>

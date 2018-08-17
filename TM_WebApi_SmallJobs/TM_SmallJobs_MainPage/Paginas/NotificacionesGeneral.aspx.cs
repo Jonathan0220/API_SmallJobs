@@ -94,5 +94,13 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas
 
 
         }
+
+        /*
+         
+         FALTA METODO QUE LLENE EL TABLE 
+         ES UNA CONSULTA A LA TABLA DE NOTIFICACION 
+         SOLO SE MOSTRARAN LOS CAMPOS DONDE IDUSUARIO ACTUAL = 4
+         
+         */
     }
 }

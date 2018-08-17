@@ -91,6 +91,10 @@ namespace TM_WebApi_SmallJobs.TM_SmallJobs_MainPage.Paginas {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
+<<<<<<< HEAD
         //protected global::System.Web.UI.WebControls.Button Button1;
+=======
+       
+>>>>>>> a0f3420f68d0c5a22fae81804cbf1412c8188e05
     }
 }
